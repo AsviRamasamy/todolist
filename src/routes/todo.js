@@ -5,7 +5,7 @@ const router = express.Router();
 router.post('/',async (req, res) =>{
     const {title, description} = req.body;
     const todo = await createTODO(title, description);
-    res.send(req.body);
+    res.send(req.body);//to give commit
 });
 
 router.delete('/:id', async(req, res) => {
